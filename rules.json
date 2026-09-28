@@ -6,8 +6,7 @@
       "starter_tidak_berbunyi"
     ],
     "conclusion": "gangguan_sumber_listrik",
-    "priority": 85,
-    "risk": "medium",
+    "urgency": "check_before_use",
     "explanation": "Panel tidak menyala dan starter tidak mengeluarkan suara. Kondisi ini mengarah pada gangguan sumber listrik utama.",
     "actions": [
       "Pastikan kunci kontak berada pada posisi ON.",
@@ -23,8 +22,7 @@
       "standar_samping_turun"
     ],
     "conclusion": "sistem_pengaman_aktif",
-    "priority": 90,
-    "risk": "medium",
+    "urgency": "check_before_use",
     "explanation": "Standar samping masih turun. Pada skuter matic dengan sistem ignition cut-off, kondisi ini dapat mencegah mesin menyala.",
     "actions": [
       "Naikkan standar samping sampai posisi terlipat.",
@@ -40,8 +38,7 @@
       "tidak_ada_bensin"
     ],
     "conclusion": "bahan_bakar_tidak_cukup",
-    "priority": 80,
-    "risk": "low",
+    "urgency": "routine_check",
     "explanation": "Starter memutar mesin, tetapi bahan bakar tidak cukup untuk proses pembakaran.",
     "actions": [
       "Isi bahan bakar secukupnya di SPBU.",
@@ -57,8 +54,7 @@
       "klakson_lemah"
     ],
     "conclusion": "indikasi_tegangan_aki_rendah",
-    "priority": 75,
-    "risk": "medium",
+    "urgency": "check_before_use",
     "explanation": "Panel redup dan klakson lemah merupakan indikasi tegangan aki rendah atau sambungan aki yang kurang baik.",
     "actions": [
       "Kurangi percobaan starter berulang.",
@@ -75,8 +71,7 @@
       "indikator_mil"
     ],
     "conclusion": "peringatan_sistem_mesin",
-    "priority": 88,
-    "risk": "high",
+    "urgency": "check_before_use",
     "explanation": "Lampu indikator mesin tetap menyala ketika mesin tidak hidup. Ini menunjukkan sistem pemantauan mesin mendeteksi anomali.",
     "actions": [
       "Matikan kunci kontak dan tunggu beberapa detik.",
@@ -92,8 +87,7 @@
       "indikator_suhu"
     ],
     "conclusion": "mesin_terlalu_panas",
-    "priority": 100,
-    "risk": "high",
+    "urgency": "stop_use",
     "explanation": "Indikator suhu menunjukkan mesin terlalu panas. Motor tidak boleh dipaksa terus berjalan.",
     "actions": [
       "Berhenti di tempat yang aman.",
@@ -112,8 +106,7 @@
       ]
     },
     "conclusion": "rem_tidak_aman",
-    "priority": 110,
-    "risk": "critical",
+    "urgency": "stop_use",
     "explanation": "Rem tidak memberikan respons normal. Motor tidak aman untuk dikendarai.",
     "actions": [
       "Jangan melanjutkan perjalanan.",
@@ -130,8 +123,7 @@
       "motor_tidak_stabil"
     ],
     "conclusion": "masalah_ban",
-    "priority": 95,
-    "risk": "high",
+    "urgency": "stop_use",
     "explanation": "Motor tidak stabil dan ban menunjukkan kondisi fisik yang bermasalah. Tekanan atau kondisi ban dapat memengaruhi kendali.",
     "actions": [
       "Kurangi kecepatan dan berhenti di tempat aman.",
@@ -148,8 +140,7 @@
       "ada_bensin"
     ],
     "conclusion": "mesin_tidak_hidup",
-    "priority": 70,
-    "risk": "medium",
+    "urgency": "check_before_use",
     "explanation": "Starter memutar mesin dan bahan bakar tersedia, tetapi mesin belum hidup. Penyebab dapat berkaitan dengan urutan start, indikator mesin, aki, atau sistem pengapian.",
     "actions": [
       "Pastikan standar samping terlipat dan salah satu tuas rem ditarik.",
@@ -166,8 +157,7 @@
       "sekring_putus"
     ],
     "conclusion": "sekring_putus",
-    "priority": 86,
-    "risk": "high",
+    "urgency": "check_before_use",
     "explanation": "Starter tidak bersuara dan sekring terlihat putus. Sekring memutus rangkaian ketika terjadi arus berlebih.",
     "actions": [
       "Matikan kunci kontak sebelum mengganti sekring.",
@@ -183,8 +173,7 @@
       "indikator_baterai"
     ],
     "conclusion": "peringatan_pengisian_aki",
-    "priority": 85,
-    "risk": "high",
+    "urgency": "check_before_use",
     "explanation": "Indikator baterai atau pengisian menyala. Ini merupakan peringatan pada sistem pengisian, bukan bukti tunggal bahwa aki pasti rusak.",
     "actions": [
       "Berhenti di tempat aman jika motor mulai kehilangan tenaga listrik.",
@@ -200,8 +189,7 @@
       "motor_lambat"
     ],
     "conclusion": "aki_lemah_atau_pengisian_bermasalah",
-    "priority": 82,
-    "risk": "medium",
+    "urgency": "check_before_use",
     "explanation": "Indikasi tegangan rendah disertai performa motor yang melambat mengarah pada kondisi aki lemah atau sistem pengisian yang perlu diperiksa.",
     "actions": [
       "Hentikan percobaan starter berulang.",
@@ -218,8 +206,7 @@
       "starter_ditekan_terlalu_lama"
     ],
     "conclusion": "percobaan_starter_berlebihan",
-    "priority": 78,
-    "risk": "medium",
+    "urgency": "check_before_use",
     "explanation": "Tombol starter ditekan terlalu lama ketika mesin belum hidup. Percobaan seperti ini dapat membebani starter dan aki.",
     "actions": [
       "Lepaskan tombol starter.",
@@ -236,8 +223,7 @@
       "kebocoran_cairan_pendingin"
     ],
     "conclusion": "kebocoran_sistem_pendingin",
-    "priority": 105,
-    "risk": "critical",
+    "urgency": "stop_use",
     "explanation": "Indikator suhu menyala dan terlihat kebocoran cairan pendingin. Mesin berisiko mengalami panas berlebih.",
     "actions": [
       "Matikan mesin dan tunggu sampai dingin.",
@@ -253,8 +239,7 @@
       "ban_bermasalah"
     ],
     "conclusion": "ban_perlu_diperiksa",
-    "priority": 92,
-    "risk": "high",
+    "urgency": "stop_use",
     "explanation": "Ban terlihat kempis, retak, tertusuk, atau aus. Kondisi tersebut dapat mengurangi traksi dan kestabilan motor.",
     "actions": [
       "Jangan memacu motor.",
@@ -270,8 +255,7 @@
       "tuas_rem_lembek"
     ],
     "conclusion": "tekanan_rem_tidak_normal",
-    "priority": 110,
-    "risk": "critical",
+    "urgency": "stop_use",
     "explanation": "Tuas rem terasa lembek atau spongy. Manual Yamaha menyebut kondisi ini dapat menunjukkan udara di sistem hidrolik dan menurunkan kemampuan pengereman.",
     "actions": [
       "Jangan berkendara di jalan umum.",
@@ -287,8 +271,7 @@
       "indikator_tetap_setelah_mesin_hidup"
     ],
     "conclusion": "indikator_mesin_tetap_menyala",
-    "priority": 90,
-    "risk": "high",
+    "urgency": "check_before_use",
     "explanation": "Indikator mesin tetap menyala setelah mesin hidup. Ini menunjukkan peringatan sistem pemantauan mesin belum hilang.",
     "actions": [
       "Jangan mengabaikan indikator yang tetap menyala.",
@@ -303,8 +286,7 @@
       "oli_mesin_kurang"
     ],
     "conclusion": "level_oli_mesin_tidak_cukup",
-    "priority": 88,
-    "risk": "high",
+    "urgency": "check_before_use",
     "explanation": "Level oli mesin terindikasi kurang. Oli diperlukan untuk pelumasan mesin dan level yang tidak cukup dapat meningkatkan risiko kerusakan.",
     "actions": [
       "Matikan mesin dan letakkan motor sesuai posisi pemeriksaan pada manual.",
@@ -320,8 +302,7 @@
       "lampu_rem_tidak_menyala"
     ],
     "conclusion": "gangguan_lampu_rem",
-    "priority": 65,
-    "risk": "medium",
+    "urgency": "check_before_use",
     "explanation": "Lampu rem tidak menyala saat tuas rem ditekan. Pengendara di belakang dapat terlambat mengetahui motor sedang mengerem.",
     "actions": [
       "Jangan berkendara malam atau di lalu lintas padat sebelum lampu rem berfungsi.",
@@ -338,8 +319,7 @@
       "prosedur_start_sudah_benar"
     ],
     "conclusion": "gangguan_start_setelah_pemeriksaan_dasar",
-    "priority": 74,
-    "risk": "medium",
+    "urgency": "check_before_use",
     "explanation": "Bahan bakar tersedia dan prosedur start sudah dilakukan dengan benar, tetapi mesin tetap tidak hidup. Pemeriksaan dasar belum menemukan penyebab yang dapat diselesaikan dari tombol starter.",
     "actions": [
       "Hentikan percobaan starter berulang.",
