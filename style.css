@@ -408,18 +408,18 @@ body {
    SOBATOTO VISUAL POLISH
 ================================= */
 :root {
-    --oto-navy: #030e50;
-    --oto-blue: #2875fb;
-    --oto-blue-dark: #1e3fb2;
+    --oto-navy: #17324d;
+    --oto-blue: #2f80c9;
+    --oto-blue-dark: #1e609c;
     --oto-orange: #f28c28;
-    --oto-cream: #f4f8ff;
-    --oto-line: #dce8ff;
+    --oto-cream: #f7f3ed;
+    --oto-line: #e5e9ee;
     --oto-text: #1f2933;
     --oto-muted: #718096;
 }
 
 body {
-    background: linear-gradient(135deg, #c3d7fc 0%, #eaf2ff 100%);
+    background: linear-gradient(135deg, #dfeaf4 0%, #f7efe6 100%);
     color: var(--oto-text);
 }
 
@@ -432,7 +432,7 @@ body {
 .chat-header {
     height: 70px;
     padding: 0 18px;
-    background: linear-gradient(115deg, var(--oto-blue-dark), var(--oto-blue));
+    background: linear-gradient(115deg, var(--oto-navy), var(--oto-blue));
     box-shadow: 0 3px 12px rgba(23, 50, 77, 0.18);
 }
 
@@ -457,8 +457,8 @@ body {
 .chatbox {
     padding: 20px 14px 14px;
     background:
-        radial-gradient(circle at 12% 8%, rgba(195, 215, 252, .60), transparent 145px),
-        radial-gradient(circle at 88% 42%, rgba(40, 117, 251, .10), transparent 170px),
+        radial-gradient(circle at 12% 8%, rgba(242, 140, 40, .10), transparent 145px),
+        radial-gradient(circle at 88% 42%, rgba(47, 128, 201, .10), transparent 170px),
         var(--oto-cream);
 }
 
@@ -470,17 +470,10 @@ body {
     width: 42px;
     height: 42px;
     margin-right: 9px;
-    background: #c3d7fc;
-    border: 2px solid var(--oto-blue);
+    background: #fff4e8;
+    border: 2px solid var(--oto-orange);
     box-shadow: 0 3px 8px rgba(23, 50, 77, .10);
     font-size: 21px;
-}
-
-.bot-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 50%;
 }
 
 .message {
@@ -576,191 +569,5 @@ body {
     .question-image {
         width: 155px;
         height: 122px;
-    }
-}
-
-/* =================================
-   CHAT APP REDESIGN
-================================= */
-:root {
-    --oto-bg: #f7f7ff;
-    --oto-purple: #5b4bd8;
-    --oto-purple-soft: #eeedff;
-    --oto-ink: #22233a;
-    --oto-gray: #85869a;
-}
-
-body {
-    background: #e9eaff;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
-.phone {
-    max-width: 480px;
-    background: var(--oto-bg);
-    border: 1px solid #e3e3f2;
-    border-radius: 28px;
-    box-shadow: 0 20px 60px rgba(64, 54, 150, .18);
-}
-
-.chat-header {
-    height: 86px;
-    padding: 15px 18px;
-    align-items: center;
-    background: rgba(247, 247, 255, .94);
-    color: var(--oto-ink);
-    border-bottom: 1px solid #e8e8f4;
-    box-shadow: none;
-    backdrop-filter: blur(16px);
-}
-
-.header-bot-avatar {
-    width: 46px;
-    height: 46px;
-    overflow: hidden;
-    margin-right: 10px;
-    border-radius: 50%;
-    background: linear-gradient(145deg, #d8e5ff, #f0f1ff);
-    border: 1px solid #d5d7fa;
-}
-
-.header-bot-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.bot-name {
-    position: static;
-    transform: none;
-    margin: 0;
-    color: var(--oto-ink);
-    font-size: 16px;
-    font-weight: 750;
-    letter-spacing: 0;
-}
-
-.bot-name::after {
-    content: "Asisten troubleshooting motor";
-    display: block;
-    margin-top: 4px;
-    color: var(--oto-gray);
-    font-size: 11px;
-    font-weight: 450;
-}
-
-.header-status {
-    margin-left: 9px;
-    margin-top: 24px;
-    color: #47ae7d;
-    font-size: 10px;
-    font-weight: 650;
-}
-
-.header-actions {
-    margin-left: auto;
-    color: var(--oto-gray);
-    font-size: 25px;
-    line-height: 1;
-}
-
-.chatbox {
-    padding: 20px 15px 16px;
-    background:
-        radial-gradient(circle at 0% 14%, rgba(219, 222, 255, .58), transparent 210px),
-        radial-gradient(circle at 100% 72%, rgba(232, 222, 255, .55), transparent 250px),
-        var(--oto-bg);
-}
-
-.message-row {
-    margin-bottom: 15px;
-}
-
-.bot-avatar {
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
-    border: 0;
-    background: #e1e4ff;
-    box-shadow: none;
-}
-
-.message {
-    max-width: 78%;
-    padding: 11px 13px;
-    color: var(--oto-ink);
-    border-radius: 16px;
-    font-size: 14px;
-    line-height: 1.45;
-    box-shadow: 0 4px 12px rgba(68, 61, 150, .06);
-}
-
-.bot .message {
-    background: #ffffff;
-    border: 1px solid #eeeeF8;
-    border-radius: 5px 16px 16px 16px;
-}
-
-.user .message {
-    background: var(--oto-purple);
-    color: #ffffff;
-    border: 0;
-    border-radius: 16px 5px 16px 16px;
-    box-shadow: 0 7px 14px rgba(91, 75, 216, .20);
-}
-
-.user .message-time {
-    color: rgba(255, 255, 255, .72);
-}
-
-.answer-area {
-    display: grid;
-    gap: 6px;
-    padding: 10px 12px 14px;
-    background: rgba(255, 255, 255, .90);
-    border-top: 1px solid #e7e7f2;
-    box-shadow: 0 -8px 24px rgba(75, 68, 157, .07);
-}
-
-.answer-button {
-    min-height: 48px;
-    margin: 0;
-    padding: 11px 15px;
-    border: 1px solid #dfe0f7;
-    border-radius: 13px;
-    background: #ffffff;
-    color: var(--oto-ink);
-    font-size: 13px;
-    font-weight: 650;
-    box-shadow: 0 2px 8px rgba(54, 49, 121, .05);
-}
-
-.answer-button:hover {
-    border-color: #b5aff8;
-    background: var(--oto-purple-soft);
-    color: var(--oto-purple);
-    transform: translateY(-1px);
-}
-
-.answer-button:active {
-    background: #ddd9ff;
-}
-
-.message-text strong {
-    color: var(--oto-purple);
-}
-
-@media (min-width: 501px) {
-    .phone {
-        height: 94vh;
-        margin-top: 3vh;
-        border-radius: 28px;
-    }
-}
-
-@media (max-width: 500px) {
-    .phone {
-        border-radius: 0;
-        box-shadow: none;
     }
 }
