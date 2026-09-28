@@ -1,22 +1,351 @@
 [
-  {"id":"R1","conditions":["panel_mati","starter_tidak_berbunyi"],"conclusion":"gangguan_sumber_listrik","priority":85,"risk":"medium","explanation":"Panel tidak menyala dan starter tidak mengeluarkan suara. Kondisi ini mengarah pada gangguan sumber listrik utama.","actions":["Pastikan kunci kontak berada pada posisi ON.","Pastikan standar samping sudah dinaikkan.","Periksa apakah sekring terlihat putus.","Jangan mengganti sekring dengan kapasitas ampere yang berbeda."],"source":"Honda PCX160 Owner's Manual, hlm. 107 dan 125–126; Yamaha NMAX Owner's Manual, hlm. 79–80"},
-  {"id":"R2","conditions":["standar_samping_turun"],"conclusion":"sistem_pengaman_aktif","priority":90,"risk":"medium","explanation":"Standar samping masih turun. Pada skuter matic dengan sistem ignition cut-off, kondisi ini dapat mencegah mesin menyala.","actions":["Naikkan standar samping sampai posisi terlipat.","Tarik salah satu tuas rem, lalu tekan tombol starter.","Jangan mencoba berkendara sebelum standar samping benar-benar terlipat."],"source":"Honda PCX160 Owner's Manual, hlm. 64; Yamaha NMAX Owner's Manual, hlm. 34–35 dan 39–40"},
-  {"id":"R3","conditions":["starter_memutar_tapi_mesin_tidak_hidup","tidak_ada_bensin"],"conclusion":"bahan_bakar_tidak_cukup","priority":80,"risk":"low","explanation":"Starter memutar mesin, tetapi bahan bakar tidak cukup untuk proses pembakaran.","actions":["Isi bahan bakar secukupnya di SPBU.","Setelah mengisi, tutup tangki dengan rapat.","Coba prosedur starter normal satu kali."],"source":"Honda PCX160 Owner's Manual, hlm. 107; Yamaha NMAX Owner's Manual, hlm. 30 dan 79"},
-  {"id":"R4","conditions":["panel_redup","klakson_lemah"],"conclusion":"indikasi_tegangan_aki_rendah","priority":75,"risk":"medium","explanation":"Panel redup dan klakson lemah merupakan indikasi tegangan aki rendah atau sambungan aki yang kurang baik.","actions":["Kurangi percobaan starter berulang.","Periksa secara visual apakah terminal aki tampak longgar atau berkarat.","Jika tersedia, lakukan pengisian menggunakan charger aki sepeda motor.","Jangan melakukan jump-start dari aki mobil."],"source":"Honda PCX160 Owner's Manual, hlm. 107 dan 124; Yamaha NMAX Owner's Manual, hlm. 70–71 dan 79–80"},
-  {"id":"R5","conditions":["starter_memutar_tapi_mesin_tidak_hidup","indikator_mil"],"conclusion":"peringatan_sistem_mesin","priority":88,"risk":"high","explanation":"Lampu indikator mesin tetap menyala ketika mesin tidak hidup. Ini menunjukkan sistem pemantauan mesin mendeteksi anomali.","actions":["Matikan kunci kontak dan tunggu beberapa detik.","Pastikan standar samping terlipat dan bahan bakar tersedia.","Jangan menekan starter terus-menerus.","Jika indikator tetap menyala setelah mesin berhasil hidup, hentikan penggunaan untuk pemeriksaan teknisi."],"source":"Honda PCX160 Owner's Manual, hlm. 107 dan 109–110; Yamaha NMAX Owner's Manual, hlm. 20–21"},
-  {"id":"R6","conditions":["indikator_suhu"],"conclusion":"mesin_terlalu_panas","priority":100,"risk":"high","explanation":"Indikator suhu menunjukkan mesin terlalu panas. Motor tidak boleh dipaksa terus berjalan.","actions":["Berhenti di tempat yang aman.","Matikan mesin dan tunggu sampai benar-benar dingin.","Setelah dingin, periksa apakah ada kebocoran cairan pendingin yang terlihat.","Jangan membuka tutup sistem pendingin ketika mesin masih panas."],"source":"Honda PCX160 Owner's Manual, hlm. 108; Yamaha NMAX Owner's Manual, hlm. 81"},
-  {"id":"R7","conditions":{"OR":["rem_tidak_responsif","tuas_rem_kosong"]},"conclusion":"rem_tidak_aman","priority":110,"risk":"critical","explanation":"Rem tidak memberikan respons normal. Motor tidak aman untuk dikendarai.","actions":["Jangan melanjutkan perjalanan.","Dorong motor hanya di tempat aman atau minta bantuan pengangkutan.","Jangan mengandalkan rem lain sebagai pengganti untuk berkendara di jalan umum.","Tuas rem yang terasa lembek atau kosong memerlukan pemeriksaan sistem rem."],"source":"Yamaha NMAX Owner's Manual, hlm. 64; Honda PCX160 Owner's Manual, bagian pemeriksaan rem hlm. 95–99"},
-  {"id":"R8","conditions":["ban_bermasalah","motor_tidak_stabil"],"conclusion":"masalah_ban","priority":95,"risk":"high","explanation":"Motor tidak stabil dan ban menunjukkan kondisi fisik yang bermasalah. Tekanan atau kondisi ban dapat memengaruhi kendali.","actions":["Kurangi kecepatan dan berhenti di tempat aman.","Periksa apakah ban kempis, retak, tertusuk, atau alurnya sudah aus.","Periksa tekanan ban saat ban dalam kondisi dingin.","Jangan melanjutkan perjalanan jika ban rusak atau sangat kempis."],"source":"Yamaha NMAX Owner's Manual, hlm. 62–63 dan 87; Honda PCX160 Owner's Manual, hlm. 123 dan 144"},
-  {"id":"R9","conditions":["starter_memutar_tapi_mesin_tidak_hidup","ada_bensin"],"conclusion":"mesin_tidak_hidup","priority":70,"risk":"medium","explanation":"Starter memutar mesin dan bahan bakar tersedia, tetapi mesin belum hidup. Penyebab dapat berkaitan dengan urutan start, indikator mesin, aki, atau sistem pengapian.","actions":["Pastikan standar samping terlipat dan salah satu tuas rem ditarik.","Tekan starter maksimal sekitar 10 detik untuk satu percobaan.","Tunggu beberapa detik sebelum mencoba lagi.","Jika tetap gagal, jangan memaksa starter berulang kali."],"source":"Honda PCX160 Owner's Manual, hlm. 63–65 dan 107; Yamaha NMAX Owner's Manual, hlm. 39–40 dan 79"},
-  {"id":"R10","conditions":["starter_tidak_berbunyi","sekring_putus"],"conclusion":"sekring_putus","priority":86,"risk":"high","explanation":"Starter tidak bersuara dan sekring terlihat putus. Sekring memutus rangkaian ketika terjadi arus berlebih.","actions":["Matikan kunci kontak sebelum mengganti sekring.","Ganti hanya dengan sekring berkapasitas ampere yang sama.","Jangan mengganti sekring dengan kawat atau kapasitas lebih besar.","Jika sekring kembali putus, hentikan percobaan dan minta pemeriksaan rangkaian."],"source":"Honda PCX160 Owner's Manual, hlm. 125–126 dan 145; Yamaha NMAX Owner's Manual, hlm. 72–73"},
-  {"id":"R11","conditions":["indikator_baterai"],"conclusion":"peringatan_pengisian_aki","priority":85,"risk":"high","explanation":"Indikator baterai atau pengisian menyala. Ini merupakan peringatan pada sistem pengisian, bukan bukti tunggal bahwa aki pasti rusak.","actions":["Berhenti di tempat aman jika motor mulai kehilangan tenaga listrik.","Jangan menyimpulkan aki rusak hanya dari satu indikator.","Periksa sistem pengisian sesuai manual atau minta pengujian teknisi."],"source":"Honda PCX160 Owner's Manual, hlm. 109–110; Yamaha NMAX Owner's Manual, hlm. 20–21"},
-  {"id":"R12","conditions":["indikasi_tegangan_aki_rendah","motor_lambat"],"conclusion":"aki_lemah_atau_pengisian_bermasalah","priority":82,"risk":"medium","explanation":"Indikasi tegangan rendah disertai performa motor yang melambat mengarah pada kondisi aki lemah atau sistem pengisian yang perlu diperiksa.","actions":["Hentikan percobaan starter berulang.","Periksa terminal aki secara visual jika aman dilakukan.","Gunakan charger aki sepeda motor yang sesuai bila tersedia.","Jangan menggunakan jump-start dari aki mobil."],"source":"Honda PCX160 Owner's Manual, hlm. 124; Yamaha NMAX Owner's Manual, hlm. 70–71 dan 79–80"},
-  {"id":"R13","conditions":["starter_memutar_tapi_mesin_tidak_hidup","starter_ditekan_terlalu_lama"],"conclusion":"percobaan_starter_berlebihan","priority":78,"risk":"medium","explanation":"Tombol starter ditekan terlalu lama ketika mesin belum hidup. Percobaan seperti ini dapat membebani starter dan aki.","actions":["Lepaskan tombol starter.","Tunggu beberapa detik sebelum mencoba lagi.","Batasi satu percobaan starter sekitar 10 detik.","Jika tetap gagal, gunakan hasil pemeriksaan bahan bakar, standar samping, dan indikator sebagai petunjuk berikutnya."],"source":"Honda PCX160 Owner's Manual, hlm. 64–65; Yamaha NMAX Owner's Manual, hlm. 39–40"},
-  {"id":"R14","conditions":["indikator_suhu","kebocoran_cairan_pendingin"],"conclusion":"kebocoran_sistem_pendingin","priority":105,"risk":"critical","explanation":"Indikator suhu menyala dan terlihat kebocoran cairan pendingin. Mesin berisiko mengalami panas berlebih.","actions":["Matikan mesin dan tunggu sampai dingin.","Jangan membuka tutup radiator atau reservoir saat panas.","Jangan menghidupkan dan menjalankan motor dengan kebocoran yang terlihat.","Tempatkan motor di lokasi aman untuk pemeriksaan sistem pendingin."],"source":"Honda PCX160 Owner's Manual, hlm. 108; Yamaha NMAX Owner's Manual, hlm. 81"},
-  {"id":"R15","conditions":["ban_bermasalah"],"conclusion":"ban_perlu_diperiksa","priority":92,"risk":"high","explanation":"Ban terlihat kempis, retak, tertusuk, atau aus. Kondisi tersebut dapat mengurangi traksi dan kestabilan motor.","actions":["Jangan memacu motor.","Periksa tekanan ban saat dingin.","Jangan menambal atau menggunakan ban yang rusak berat tanpa prosedur yang sesuai.","Gunakan bantuan pengangkutan jika ban kempis berat atau rusak."],"source":"Yamaha NMAX Owner's Manual, hlm. 62–63 dan 87; Honda PCX160 Owner's Manual, hlm. 123 dan 144"},
-  {"id":"R16","conditions":["tuas_rem_lembek"],"conclusion":"tekanan_rem_tidak_normal","priority":110,"risk":"critical","explanation":"Tuas rem terasa lembek atau spongy. Manual Yamaha menyebut kondisi ini dapat menunjukkan udara di sistem hidrolik dan menurunkan kemampuan pengereman.","actions":["Jangan berkendara di jalan umum.","Jangan memompa tuas rem berulang kali untuk memaksa motor berjalan.","Minta pemeriksaan sistem rem dan kemungkinan udara atau kebocoran pada sistem hidrolik."],"source":"Yamaha NMAX Owner's Manual, hlm. 64"},
-  {"id":"R17","conditions":["indikator_mil","indikator_tetap_setelah_mesin_hidup"],"conclusion":"indikator_mesin_tetap_menyala","priority":90,"risk":"high","explanation":"Indikator mesin tetap menyala setelah mesin hidup. Ini menunjukkan peringatan sistem pemantauan mesin belum hilang.","actions":["Jangan mengabaikan indikator yang tetap menyala.","Hindari penggunaan motor untuk perjalanan jauh.","Catat indikator yang terlihat dan lakukan pemeriksaan sistem mesin sesuai manual."],"source":"Honda PCX160 Owner's Manual, hlm. 109–110; Yamaha NMAX Owner's Manual, hlm. 20–21"},
-  {"id":"R18","conditions":["oli_mesin_kurang"],"conclusion":"level_oli_mesin_tidak_cukup","priority":88,"risk":"high","explanation":"Level oli mesin terindikasi kurang. Oli diperlukan untuk pelumasan mesin dan level yang tidak cukup dapat meningkatkan risiko kerusakan.","actions":["Matikan mesin dan letakkan motor sesuai posisi pemeriksaan pada manual.","Periksa level oli dengan metode yang sesuai manual.","Tambahkan oli dengan spesifikasi yang sesuai jika level memang kurang.","Jangan menjalankan motor jika terdapat kebocoran oli besar."],"source":"Yamaha NMAX Owner's Manual, hlm. 36–38; Honda PCX160 Owner's Manual, bagian pemeriksaan dan penggantian oli hlm. 95–99"},
-  {"id":"R19","conditions":["lampu_rem_tidak_menyala"],"conclusion":"gangguan_lampu_rem","priority":65,"risk":"medium","explanation":"Lampu rem tidak menyala saat tuas rem ditekan. Pengendara di belakang dapat terlambat mengetahui motor sedang mengerem.","actions":["Jangan berkendara malam atau di lalu lintas padat sebelum lampu rem berfungsi.","Periksa apakah lampu menyala ketika tuas rem depan dan belakang ditekan.","Jika tetap mati, periksa bohlam atau rangkaian sesuai manual."],"source":"Yamaha NMAX Owner's Manual, bagian pemeriksaan lampu dan sakelar hlm. 36–38"},
-  {"id":"R20","conditions":["starter_memutar_tapi_mesin_tidak_hidup","ada_bensin","prosedur_start_sudah_benar"],"conclusion":"gangguan_start_setelah_pemeriksaan_dasar","priority":74,"risk":"medium","explanation":"Bahan bakar tersedia dan prosedur start sudah dilakukan dengan benar, tetapi mesin tetap tidak hidup. Pemeriksaan dasar belum menemukan penyebab yang dapat diselesaikan dari tombol starter.","actions":["Hentikan percobaan starter berulang.","Catat apakah indikator mesin menyala dan apakah suara starter normal.","Jangan membuka komponen injeksi atau pengapian tanpa alat dan pengetahuan yang sesuai."],"source":"Honda PCX160 Owner's Manual, hlm. 107; Yamaha NMAX Owner's Manual, hlm. 79–80"}
+  {
+    "id": "R1",
+    "conditions": [
+      "panel_mati",
+      "starter_tidak_berbunyi"
+    ],
+    "conclusion": "gangguan_sumber_listrik",
+    "priority": 85,
+    "risk": "medium",
+    "explanation": "Panel tidak menyala dan starter tidak mengeluarkan suara. Kondisi ini mengarah pada gangguan sumber listrik utama.",
+    "actions": [
+      "Pastikan kunci kontak berada pada posisi ON.",
+      "Pastikan standar samping sudah dinaikkan.",
+      "Periksa apakah sekring terlihat putus.",
+      "Jangan mengganti sekring dengan kapasitas ampere yang berbeda."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 107 dan 125–126; Yamaha NMAX Owner's Manual, hlm. 79–80"
+  },
+  {
+    "id": "R2",
+    "conditions": [
+      "standar_samping_turun"
+    ],
+    "conclusion": "sistem_pengaman_aktif",
+    "priority": 90,
+    "risk": "medium",
+    "explanation": "Standar samping masih turun. Pada skuter matic dengan sistem ignition cut-off, kondisi ini dapat mencegah mesin menyala.",
+    "actions": [
+      "Naikkan standar samping sampai posisi terlipat.",
+      "Tarik salah satu tuas rem, lalu tekan tombol starter.",
+      "Jangan mencoba berkendara sebelum standar samping benar-benar terlipat."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 64; Yamaha NMAX Owner's Manual, hlm. 34–35 dan 39–40"
+  },
+  {
+    "id": "R3",
+    "conditions": [
+      "starter_memutar_tapi_mesin_tidak_hidup",
+      "tidak_ada_bensin"
+    ],
+    "conclusion": "bahan_bakar_tidak_cukup",
+    "priority": 80,
+    "risk": "low",
+    "explanation": "Starter memutar mesin, tetapi bahan bakar tidak cukup untuk proses pembakaran.",
+    "actions": [
+      "Isi bahan bakar secukupnya di SPBU.",
+      "Setelah mengisi, tutup tangki dengan rapat.",
+      "Coba prosedur starter normal satu kali."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 107; Yamaha NMAX Owner's Manual, hlm. 30 dan 79"
+  },
+  {
+    "id": "R4",
+    "conditions": [
+      "panel_redup",
+      "klakson_lemah"
+    ],
+    "conclusion": "indikasi_tegangan_aki_rendah",
+    "priority": 75,
+    "risk": "medium",
+    "explanation": "Panel redup dan klakson lemah merupakan indikasi tegangan aki rendah atau sambungan aki yang kurang baik.",
+    "actions": [
+      "Kurangi percobaan starter berulang.",
+      "Periksa secara visual apakah terminal aki tampak longgar atau berkarat.",
+      "Jika tersedia, lakukan pengisian menggunakan charger aki sepeda motor.",
+      "Jangan melakukan jump-start dari aki mobil."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 107 dan 124; Yamaha NMAX Owner's Manual, hlm. 70–71 dan 79–80"
+  },
+  {
+    "id": "R5",
+    "conditions": [
+      "starter_memutar_tapi_mesin_tidak_hidup",
+      "indikator_mil"
+    ],
+    "conclusion": "peringatan_sistem_mesin",
+    "priority": 88,
+    "risk": "high",
+    "explanation": "Lampu indikator mesin tetap menyala ketika mesin tidak hidup. Ini menunjukkan sistem pemantauan mesin mendeteksi anomali.",
+    "actions": [
+      "Matikan kunci kontak dan tunggu beberapa detik.",
+      "Pastikan standar samping terlipat dan bahan bakar tersedia.",
+      "Jangan menekan starter terus-menerus.",
+      "Jika indikator tetap menyala setelah mesin berhasil hidup, hentikan penggunaan untuk pemeriksaan teknisi."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 107 dan 109–110; Yamaha NMAX Owner's Manual, hlm. 20–21"
+  },
+  {
+    "id": "R6",
+    "conditions": [
+      "indikator_suhu"
+    ],
+    "conclusion": "mesin_terlalu_panas",
+    "priority": 100,
+    "risk": "high",
+    "explanation": "Indikator suhu menunjukkan mesin terlalu panas. Motor tidak boleh dipaksa terus berjalan.",
+    "actions": [
+      "Berhenti di tempat yang aman.",
+      "Matikan mesin dan tunggu sampai benar-benar dingin.",
+      "Setelah dingin, periksa apakah ada kebocoran cairan pendingin yang terlihat.",
+      "Jangan membuka tutup sistem pendingin ketika mesin masih panas."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 108; Yamaha NMAX Owner's Manual, hlm. 81"
+  },
+  {
+    "id": "R7",
+    "conditions": {
+      "OR": [
+        "rem_tidak_responsif",
+        "tuas_rem_kosong"
+      ]
+    },
+    "conclusion": "rem_tidak_aman",
+    "priority": 110,
+    "risk": "critical",
+    "explanation": "Rem tidak memberikan respons normal. Motor tidak aman untuk dikendarai.",
+    "actions": [
+      "Jangan melanjutkan perjalanan.",
+      "Dorong motor hanya di tempat aman atau minta bantuan pengangkutan.",
+      "Jangan mengandalkan rem lain sebagai pengganti untuk berkendara di jalan umum.",
+      "Tuas rem yang terasa lembek atau kosong memerlukan pemeriksaan sistem rem."
+    ],
+    "source": "Yamaha NMAX Owner's Manual, hlm. 64; Honda PCX160 Owner's Manual, bagian pemeriksaan rem hlm. 95–99"
+  },
+  {
+    "id": "R8",
+    "conditions": [
+      "ban_bermasalah",
+      "motor_tidak_stabil"
+    ],
+    "conclusion": "masalah_ban",
+    "priority": 95,
+    "risk": "high",
+    "explanation": "Motor tidak stabil dan ban menunjukkan kondisi fisik yang bermasalah. Tekanan atau kondisi ban dapat memengaruhi kendali.",
+    "actions": [
+      "Kurangi kecepatan dan berhenti di tempat aman.",
+      "Periksa apakah ban kempis, retak, tertusuk, atau alurnya sudah aus.",
+      "Periksa tekanan ban saat ban dalam kondisi dingin.",
+      "Jangan melanjutkan perjalanan jika ban rusak atau sangat kempis."
+    ],
+    "source": "Yamaha NMAX Owner's Manual, hlm. 62–63 dan 87; Honda PCX160 Owner's Manual, hlm. 123 dan 144"
+  },
+  {
+    "id": "R9",
+    "conditions": [
+      "starter_memutar_tapi_mesin_tidak_hidup",
+      "ada_bensin"
+    ],
+    "conclusion": "mesin_tidak_hidup",
+    "priority": 70,
+    "risk": "medium",
+    "explanation": "Starter memutar mesin dan bahan bakar tersedia, tetapi mesin belum hidup. Penyebab dapat berkaitan dengan urutan start, indikator mesin, aki, atau sistem pengapian.",
+    "actions": [
+      "Pastikan standar samping terlipat dan salah satu tuas rem ditarik.",
+      "Tekan starter maksimal sekitar 10 detik untuk satu percobaan.",
+      "Tunggu beberapa detik sebelum mencoba lagi.",
+      "Jika tetap gagal, jangan memaksa starter berulang kali."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 63–65 dan 107; Yamaha NMAX Owner's Manual, hlm. 39–40 dan 79"
+  },
+  {
+    "id": "R10",
+    "conditions": [
+      "starter_tidak_berbunyi",
+      "sekring_putus"
+    ],
+    "conclusion": "sekring_putus",
+    "priority": 86,
+    "risk": "high",
+    "explanation": "Starter tidak bersuara dan sekring terlihat putus. Sekring memutus rangkaian ketika terjadi arus berlebih.",
+    "actions": [
+      "Matikan kunci kontak sebelum mengganti sekring.",
+      "Ganti hanya dengan sekring berkapasitas ampere yang sama.",
+      "Jangan mengganti sekring dengan kawat atau kapasitas lebih besar.",
+      "Jika sekring kembali putus, hentikan percobaan dan minta pemeriksaan rangkaian."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 125–126 dan 145; Yamaha NMAX Owner's Manual, hlm. 72–73"
+  },
+  {
+    "id": "R11",
+    "conditions": [
+      "indikator_baterai"
+    ],
+    "conclusion": "peringatan_pengisian_aki",
+    "priority": 85,
+    "risk": "high",
+    "explanation": "Indikator baterai atau pengisian menyala. Ini merupakan peringatan pada sistem pengisian, bukan bukti tunggal bahwa aki pasti rusak.",
+    "actions": [
+      "Berhenti di tempat aman jika motor mulai kehilangan tenaga listrik.",
+      "Jangan menyimpulkan aki rusak hanya dari satu indikator.",
+      "Periksa sistem pengisian sesuai manual atau minta pengujian teknisi."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 109–110; Yamaha NMAX Owner's Manual, hlm. 20–21"
+  },
+  {
+    "id": "R12",
+    "conditions": [
+      "indikasi_tegangan_aki_rendah",
+      "motor_lambat"
+    ],
+    "conclusion": "aki_lemah_atau_pengisian_bermasalah",
+    "priority": 82,
+    "risk": "medium",
+    "explanation": "Indikasi tegangan rendah disertai performa motor yang melambat mengarah pada kondisi aki lemah atau sistem pengisian yang perlu diperiksa.",
+    "actions": [
+      "Hentikan percobaan starter berulang.",
+      "Periksa terminal aki secara visual jika aman dilakukan.",
+      "Gunakan charger aki sepeda motor yang sesuai bila tersedia.",
+      "Jangan menggunakan jump-start dari aki mobil."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 124; Yamaha NMAX Owner's Manual, hlm. 70–71 dan 79–80"
+  },
+  {
+    "id": "R13",
+    "conditions": [
+      "starter_memutar_tapi_mesin_tidak_hidup",
+      "starter_ditekan_terlalu_lama"
+    ],
+    "conclusion": "percobaan_starter_berlebihan",
+    "priority": 78,
+    "risk": "medium",
+    "explanation": "Tombol starter ditekan terlalu lama ketika mesin belum hidup. Percobaan seperti ini dapat membebani starter dan aki.",
+    "actions": [
+      "Lepaskan tombol starter.",
+      "Tunggu beberapa detik sebelum mencoba lagi.",
+      "Batasi satu percobaan starter sekitar 10 detik.",
+      "Jika tetap gagal, gunakan hasil pemeriksaan bahan bakar, standar samping, dan indikator sebagai petunjuk berikutnya."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 64–65; Yamaha NMAX Owner's Manual, hlm. 39–40"
+  },
+  {
+    "id": "R14",
+    "conditions": [
+      "indikator_suhu",
+      "kebocoran_cairan_pendingin"
+    ],
+    "conclusion": "kebocoran_sistem_pendingin",
+    "priority": 105,
+    "risk": "critical",
+    "explanation": "Indikator suhu menyala dan terlihat kebocoran cairan pendingin. Mesin berisiko mengalami panas berlebih.",
+    "actions": [
+      "Matikan mesin dan tunggu sampai dingin.",
+      "Jangan membuka tutup radiator atau reservoir saat panas.",
+      "Jangan menghidupkan dan menjalankan motor dengan kebocoran yang terlihat.",
+      "Tempatkan motor di lokasi aman untuk pemeriksaan sistem pendingin."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 108; Yamaha NMAX Owner's Manual, hlm. 81"
+  },
+  {
+    "id": "R15",
+    "conditions": [
+      "ban_bermasalah"
+    ],
+    "conclusion": "ban_perlu_diperiksa",
+    "priority": 92,
+    "risk": "high",
+    "explanation": "Ban terlihat kempis, retak, tertusuk, atau aus. Kondisi tersebut dapat mengurangi traksi dan kestabilan motor.",
+    "actions": [
+      "Jangan memacu motor.",
+      "Periksa tekanan ban saat dingin.",
+      "Jangan menambal atau menggunakan ban yang rusak berat tanpa prosedur yang sesuai.",
+      "Gunakan bantuan pengangkutan jika ban kempis berat atau rusak."
+    ],
+    "source": "Yamaha NMAX Owner's Manual, hlm. 62–63 dan 87; Honda PCX160 Owner's Manual, hlm. 123 dan 144"
+  },
+  {
+    "id": "R16",
+    "conditions": [
+      "tuas_rem_lembek"
+    ],
+    "conclusion": "tekanan_rem_tidak_normal",
+    "priority": 110,
+    "risk": "critical",
+    "explanation": "Tuas rem terasa lembek atau spongy. Manual Yamaha menyebut kondisi ini dapat menunjukkan udara di sistem hidrolik dan menurunkan kemampuan pengereman.",
+    "actions": [
+      "Jangan berkendara di jalan umum.",
+      "Jangan memompa tuas rem berulang kali untuk memaksa motor berjalan.",
+      "Minta pemeriksaan sistem rem dan kemungkinan udara atau kebocoran pada sistem hidrolik."
+    ],
+    "source": "Yamaha NMAX Owner's Manual, hlm. 64"
+  },
+  {
+    "id": "R17",
+    "conditions": [
+      "indikator_mil",
+      "indikator_tetap_setelah_mesin_hidup"
+    ],
+    "conclusion": "indikator_mesin_tetap_menyala",
+    "priority": 90,
+    "risk": "high",
+    "explanation": "Indikator mesin tetap menyala setelah mesin hidup. Ini menunjukkan peringatan sistem pemantauan mesin belum hilang.",
+    "actions": [
+      "Jangan mengabaikan indikator yang tetap menyala.",
+      "Hindari penggunaan motor untuk perjalanan jauh.",
+      "Catat indikator yang terlihat dan lakukan pemeriksaan sistem mesin sesuai manual."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 109–110; Yamaha NMAX Owner's Manual, hlm. 20–21"
+  },
+  {
+    "id": "R18",
+    "conditions": [
+      "oli_mesin_kurang"
+    ],
+    "conclusion": "level_oli_mesin_tidak_cukup",
+    "priority": 88,
+    "risk": "high",
+    "explanation": "Level oli mesin terindikasi kurang. Oli diperlukan untuk pelumasan mesin dan level yang tidak cukup dapat meningkatkan risiko kerusakan.",
+    "actions": [
+      "Matikan mesin dan letakkan motor sesuai posisi pemeriksaan pada manual.",
+      "Periksa level oli dengan metode yang sesuai manual.",
+      "Tambahkan oli dengan spesifikasi yang sesuai jika level memang kurang.",
+      "Jangan menjalankan motor jika terdapat kebocoran oli besar."
+    ],
+    "source": "Yamaha NMAX Owner's Manual, hlm. 36–38; Honda PCX160 Owner's Manual, bagian pemeriksaan dan penggantian oli hlm. 95–99"
+  },
+  {
+    "id": "R19",
+    "conditions": [
+      "lampu_rem_tidak_menyala"
+    ],
+    "conclusion": "gangguan_lampu_rem",
+    "priority": 65,
+    "risk": "medium",
+    "explanation": "Lampu rem tidak menyala saat tuas rem ditekan. Pengendara di belakang dapat terlambat mengetahui motor sedang mengerem.",
+    "actions": [
+      "Jangan berkendara malam atau di lalu lintas padat sebelum lampu rem berfungsi.",
+      "Periksa apakah lampu menyala ketika tuas rem depan dan belakang ditekan.",
+      "Jika tetap mati, periksa bohlam atau rangkaian sesuai manual."
+    ],
+    "source": "Yamaha NMAX Owner's Manual, bagian pemeriksaan lampu dan sakelar hlm. 36–38"
+  },
+  {
+    "id": "R20",
+    "conditions": [
+      "starter_memutar_tapi_mesin_tidak_hidup",
+      "ada_bensin",
+      "prosedur_start_sudah_benar"
+    ],
+    "conclusion": "gangguan_start_setelah_pemeriksaan_dasar",
+    "priority": 74,
+    "risk": "medium",
+    "explanation": "Bahan bakar tersedia dan prosedur start sudah dilakukan dengan benar, tetapi mesin tetap tidak hidup. Pemeriksaan dasar belum menemukan penyebab yang dapat diselesaikan dari tombol starter.",
+    "actions": [
+      "Hentikan percobaan starter berulang.",
+      "Catat apakah indikator mesin menyala dan apakah suara starter normal.",
+      "Jangan membuka komponen injeksi atau pengapian tanpa alat dan pengetahuan yang sesuai."
+    ],
+    "source": "Honda PCX160 Owner's Manual, hlm. 107; Yamaha NMAX Owner's Manual, hlm. 79–80"
+  }
 ]
