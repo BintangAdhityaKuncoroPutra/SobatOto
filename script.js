@@ -519,7 +519,7 @@ function addBotMessage(text, images = []) {
     const avatar = document.createElement("div");
     avatar.className = "bot-avatar";
     avatar.innerHTML = `
-        <img src="images/oto-3d.png" alt="Maskot Oto">
+        <img src="images/oto-3d.png" alt="Maskot Oto" style="width:100%;height:100%;object-fit:contain;display:block;">
     `;
 
     const message = document.createElement("div");
@@ -610,12 +610,19 @@ function addUserMessage(text) {
 function diagnose() {
 
     const result = forwardChain(userFacts);
+    // Rules are grouped by the action stated in the manuals, not by
+    // an arbitrary numeric score or probability.
+    const urgencyOrder = ["stop_use", "check_before_use", "routine_check"];
+    const urgencyLabels = {
+        stop_use: "Hentikan penggunaan",
+        check_before_use: "Periksa sebelum digunakan",
+        routine_check: "Pemeriksaan awal"
+    };
     const matchedRules = (result.matchedRules || [])
         .slice()
-        .sort((a, b) => (b.priority || 0) - (a.priority || 0));
-    const rule = matchedRules[0];
+        .sort((a, b) => urgencyOrder.indexOf(a.urgency) - urgencyOrder.indexOf(b.urgency));
 
-    if (!rule) {
+    if (matchedRules.length === 0) {
         addBotMessage("Belum ada rule yang cocok dengan kombinasi jawaban ini.");
         addBotMessage(
             "Coba ulangi pemeriksaan dengan memastikan kondisi panel, bahan bakar, standar samping, dan suara starter diamati saat motor berada di tempat aman."
@@ -626,36 +633,24 @@ function diagnose() {
 
 
     addBotMessage(
-        "Terima kasih. Saya sudah menganalisis jawaban kamu."
+        `Terima kasih. Saya menemukan ${matchedRules.length} kemungkinan yang cocok dengan jawaban kamu.`
     );
 
-
-    setTimeout(() => {
-
-        addBotMessage(
-            `Kemungkinan masalahnya adalah <strong>${formatDiagnosis(rule.conclusion)}</strong>.`
-        );
-
-    }, 500);
-
-
-    setTimeout(() => {
-
-        addBotMessage(`<strong>Kenapa:</strong> ${rule.explanation}`);
-
-        addBotMessage(
-            `<strong>Langkah yang bisa dilakukan:</strong><ul>${rule.actions
-                .map(action => `<li>${action}</li>`)
-                .join("")}</ul>`
-        );
-
-        if (rule.source) {
-            addBotMessage(`<small><strong>Dasar panduan:</strong> ${rule.source}</small>`);
-        }
-
-        showRestartButton();
-
-    }, 1000);
+    let delay = 500;
+    matchedRules.forEach((rule, index) => {
+        setTimeout(() => {
+            const urgency = urgencyLabels[rule.urgency] || "Panduan pemeriksaan";
+            addBotMessage(`<strong>${index + 1}. ${formatDiagnosis(rule.conclusion)}</strong><br><small>${urgency}</small>`);
+            addBotMessage(`<strong>Kenapa:</strong> ${rule.explanation}`);
+            addBotMessage(`<strong>Langkah yang bisa dilakukan:</strong><ul>${rule.actions
+                .map(action => `<li>${action}</li>`).join("")}</ul>`);
+            if (rule.source) {
+                addBotMessage(`<small><strong>Dasar panduan:</strong> ${rule.source}</small>`);
+            }
+            if (index === matchedRules.length - 1) showRestartButton();
+        }, delay);
+        delay += 700;
+    });
 }
 
 
