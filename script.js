@@ -518,7 +518,9 @@ function addBotMessage(text, images = []) {
 
     const avatar = document.createElement("div");
     avatar.className = "bot-avatar";
-    avatar.textContent = "🏍️";
+    avatar.innerHTML = `
+        <img src="images/oto-3d.png" alt="Maskot Oto">
+    `;
 
     const message = document.createElement("div");
     message.className = "message";
