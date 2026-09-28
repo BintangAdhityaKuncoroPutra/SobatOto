@@ -14,6 +14,7 @@ async function loadRules() {
 function forwardChain(initialFacts) {
     let facts = new Set(initialFacts);
     let firedRules = [];
+    let firedRuleIds = new Set();
     let changed = true;
 
     while (changed) {
@@ -36,21 +37,21 @@ function forwardChain(initialFacts) {
                 );
             }
 
-            if (
-                satisfied &&
-                !facts.has(rule.conclusion)
-            ) {
-                facts.add(rule.conclusion);
-
+            if (satisfied && !firedRuleIds.has(rule.id)) {
+                firedRuleIds.add(rule.id);
                 firedRules.push(rule.id);
 
-                changed = true;
+                if (!facts.has(rule.conclusion)) {
+                    facts.add(rule.conclusion);
+                    changed = true;
+                }
             }
         }
     }
 
     return {
         facts: [...facts],
-        firedRules: firedRules
+        firedRules: firedRules,
+        matchedRules: rules.filter(rule => firedRuleIds.has(rule.id))
     };
 }
