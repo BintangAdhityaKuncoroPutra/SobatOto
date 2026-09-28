@@ -104,8 +104,8 @@ const questions = [
             },
 
             {
-                text: "Ya, tetapi mesin tidak hidup",
-                fact: "starter_tidak_bekerja"
+                text: "Ya, mesin berputar tetapi tidak hidup",
+                fact: "starter_memutar_tapi_mesin_tidak_hidup"
             },
 
             {
@@ -233,26 +233,31 @@ const questions = [
             {
                 text: "Tidak ada tuas rem",
                 fact: "tuas_rem_kosong"
+            },
+
+            {
+                text: "Tuas terasa lembek",
+                fact: "tuas_rem_lembek"
             }
 
         ]
     },
 
     {
-        text: "Apakah permukaan bagian bawah ban terlihat lebar?",
+        text: "Apakah ban terlihat kempis, retak, tertusuk, atau aus?",
 
         images: [],
 
         answers: [
 
             {
-                text: "Iya",
-                fact: "permukaan_ban_lebar"
+                text: "Ya, ada kerusakan atau keausan",
+                fact: "ban_bermasalah"
             },
 
             {
                 text: "Tidak",
-                fact: "permukaan_ban_tidak_lebar"
+                fact: "ban_tidak_bermasalah"
             }
 
         ]
@@ -302,6 +307,96 @@ const questions = [
                 fact: "motor_tidak_stabil"
             },
 
+        ]
+    },
+
+    {
+        text: "Jika indikator mesin menyala, apakah indikator tetap menyala setelah mesin hidup?",
+        images: [],
+        answers: [
+            {
+                text: "Ya, tetap menyala",
+                fact: "indikator_tetap_setelah_mesin_hidup"
+            },
+            {
+                text: "Tidak atau saya tidak melihatnya",
+                fact: "indikator_tidak_tetap"
+            }
+        ]
+    },
+
+    {
+        text: "Apakah tombol starter pernah ditekan lebih dari sekitar 10 detik dalam satu percobaan?",
+        images: [],
+        answers: [
+            {
+                text: "Ya",
+                fact: "starter_ditekan_terlalu_lama"
+            },
+            {
+                text: "Tidak",
+                fact: "starter_ditekan_normal"
+            }
+        ]
+    },
+
+    {
+        text: "Saat indikator suhu menyala, apakah terlihat cairan pendingin bocor?",
+        images: [],
+        answers: [
+            {
+                text: "Ya, terlihat bocor",
+                fact: "kebocoran_cairan_pendingin"
+            },
+            {
+                text: "Tidak terlihat bocor atau tidak tahu",
+                fact: "tidak_terlihat_kebocoran_pendingin"
+            }
+        ]
+    },
+
+    {
+        text: "Apakah level oli mesin terlihat kurang saat diperiksa sesuai petunjuk manual?",
+        images: [],
+        answers: [
+            {
+                text: "Ya, kurang",
+                fact: "oli_mesin_kurang"
+            },
+            {
+                text: "Tidak atau belum tahu",
+                fact: "oli_mesin_cukup_atau_tidak_diketahui"
+            }
+        ]
+    },
+
+    {
+        text: "Apakah lampu rem menyala ketika tuas rem ditekan?",
+        images: [],
+        answers: [
+            {
+                text: "Ya, menyala",
+                fact: "lampu_rem_menyala"
+            },
+            {
+                text: "Tidak menyala",
+                fact: "lampu_rem_tidak_menyala"
+            }
+        ]
+    },
+
+    {
+        text: "Setelah standar samping dinaikkan, tuas rem ditarik, dan bahan bakar tersedia, apakah prosedur start sudah dilakukan tetapi mesin tetap tidak hidup?",
+        images: [],
+        answers: [
+            {
+                text: "Ya",
+                fact: "prosedur_start_sudah_benar"
+            },
+            {
+                text: "Belum atau tidak yakin",
+                fact: "prosedur_start_belum_pasti"
+            }
         ]
     }
 
@@ -512,61 +607,20 @@ function addUserMessage(text) {
 
 function diagnose() {
 
-    const result =
-        forwardChain(userFacts);
+    const result = forwardChain(userFacts);
+    const matchedRules = (result.matchedRules || [])
+        .slice()
+        .sort((a, b) => (b.priority || 0) - (a.priority || 0));
+    const rule = matchedRules[0];
 
-
-    const possibleProblems = [
-
-        "gangguan_aki",
-
-        "sistem_pengaman",
-
-        "bensin_habis",
-
-        "malfungsi",
-
-        "mesin_panas",
-
-        "rem_tidak_aman",
-
-        "masalah_ban",
-
-        "sekring_rusak",
-
-        "gangguan_aki_lanjut",
-
-        "aki_lemah"
-
-    ];
-
-
-    const diagnosis =
-        result.facts.find(
-            fact => possibleProblems.includes(fact)
-        );
-
-
-    if (!diagnosis) {
-
+    if (!rule) {
+        addBotMessage("Belum ada rule yang cocok dengan kombinasi jawaban ini.");
         addBotMessage(
-            "Maaf, saya belum dapat menentukan kemungkinan masalah berdasarkan jawaban yang diberikan."
+            "Coba ulangi pemeriksaan dengan memastikan kondisi panel, bahan bakar, standar samping, dan suara starter diamati saat motor berada di tempat aman."
         );
-
-        addBotMessage(
-            "Sebaiknya bawa motormu ke bengkel terdekat untuk pengamatan lanjutan atau konsultasi dengan mekanik."
-        );
-
         showRestartButton();
-
         return;
     }
-
-
-    const rule =
-        rules.find(
-            r => r.conclusion === diagnosis
-        );
 
 
     addBotMessage(
@@ -577,7 +631,7 @@ function diagnose() {
     setTimeout(() => {
 
         addBotMessage(
-            `Kemungkinan masalahnya adalah <strong>${formatDiagnosis(diagnosis)}</strong>.`
+            `Kemungkinan masalahnya adalah <strong>${formatDiagnosis(rule.conclusion)}</strong>.`
         );
 
     }, 500);
@@ -585,9 +639,17 @@ function diagnose() {
 
     setTimeout(() => {
 
+        addBotMessage(`<strong>Kenapa:</strong> ${rule.explanation}`);
+
         addBotMessage(
-            rule.explanation
+            `<strong>Langkah yang bisa dilakukan:</strong><ul>${rule.actions
+                .map(action => `<li>${action}</li>`)
+                .join("")}</ul>`
         );
+
+        if (rule.source) {
+            addBotMessage(`<small><strong>Dasar panduan:</strong> ${rule.source}</small>`);
+        }
 
         showRestartButton();
 
