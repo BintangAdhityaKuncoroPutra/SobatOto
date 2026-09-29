@@ -119,7 +119,7 @@
   {
     "id": "R8",
     "conditions": [
-      "ban_bermasalah",
+      "ban_perlu_diperiksa",
       "motor_tidak_stabil"
     ],
     "conclusion": "masalah_ban",
@@ -219,7 +219,7 @@
   {
     "id": "R14",
     "conditions": [
-      "indikator_suhu",
+      "mesin_terlalu_panas",
       "kebocoran_cairan_pendingin"
     ],
     "conclusion": "kebocoran_sistem_pendingin",
