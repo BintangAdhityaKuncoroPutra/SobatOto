@@ -32,13 +32,17 @@ SobatOto mengumpulkan informasi melalui pertanyaan bertahap agar pengguna tidak 
 
 Hasil pemeriksaan berisi kemungkinan masalah, alasan hasil tersebut muncul, tingkat urgensi, tindakan yang disarankan, dan sumber manual. Jika beberapa aturan cocok pada saat yang sama, SobatOto dapat menampilkan lebih dari satu hasil. Hal ini memungkinkan pengguna melihat beberapa kondisi yang mungkin saling berkaitan.
 
-## Cara Menjalankan Secara Lokal
+## Cara Menjalankan
 
 ### Persyaratan
 
 Proyek ini tidak memerlukan framework atau package tambahan. Untuk menjalankannya, pengguna hanya memerlukan browser modern seperti Google Chrome, Microsoft Edge, atau Mozilla Firefox. Python 3 diperlukan apabila proyek ingin dijalankan menggunakan local server.
 
-### Langkah Menjalankan
+### Langkah Menjalankan dengan Web
+
+Buka tautan https://bintangadhityakuncoroputra.github.io/SobatOto/ pada _browser_ yang diinginkan.
+
+### Langkah Menjalankan Secara Lokal
 
 1. Clone repository:
 
