@@ -17,7 +17,7 @@ SobatOto tidak menulis jawaban baru secara bebas seperti *chatbot* generatif. Si
 
 ## Tautan Proyek
 <p align="center">
-  <img src="images/oto-3d.png" alt="Maskot SobatOto" width="500">
+  <img src="images/oto-3d.png" alt="Maskot SobatOto" width="300">
 </p>
 
 - Demo chatbot: [SobatOto](https://bintangadhityakuncoroputra.github.io/SobatOto/)
