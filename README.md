@@ -16,7 +16,9 @@ Salah satu contoh aturannya adalah: jika panel motor mati dan starter tidak berb
 SobatOto tidak menulis jawaban baru secara bebas seperti *chatbot* generatif. Sistem hanya memberikan hasil yang sesuai dengan aturan yang tersimpan. Karena itu, alasan di balik setiap hasil dapat dilihat dari gejala yang dipilih, aturan yang aktif, dan sumber manualnya.
 
 ## Tautan Proyek
-![SobatOto](images/oto-3d.png)
+<p align="center">
+  <img src="images/oto-3d.png" alt="Maskot SobatOto" width="500">
+</p>
 
 - Demo chatbot: [SobatOto](https://bintangadhityakuncoroputra.github.io/SobatOto/)
 - Repository source code: [GitHub SobatOto](https://github.com/BintangAdhityaKuncoroPutra/SobatOto)
