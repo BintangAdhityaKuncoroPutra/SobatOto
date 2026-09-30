@@ -1,5 +1,5 @@
-## Tentang SobatOto
-# Chatbot *Troubleshooting* Sepeda Motor Matic Berbasis *Knowledge-Base System*
+# Tentang SobatOto
+## Chatbot *Troubleshooting* Sepeda Motor Matic Berbasis *Knowledge-Base System*
 
 Ketika sepeda motor mengalami masalah, pengguna biasanya mulai memeriksa gejala yang paling mudah terlihat. Contohnya adalah kondisi panel, suara starter, jumlah bahan bakar, lampu indikator, rem, dan ban. Namun, tidak semua pengguna mengetahui arti dari gejala tersebut atau urutan pemeriksaan yang sebaiknya dilakukan.
 
