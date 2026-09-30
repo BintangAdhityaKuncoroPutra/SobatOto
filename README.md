@@ -25,9 +25,11 @@ SobatOto tidak menulis jawaban baru secara bebas seperti *chatbot* generatif. Si
 - Laporan dan PPT: [Penjelasan](https://drive.google.com/drive/folders/1Dbpwmw43ebVreyou-A0sh0NcY_cnH0Of?usp=sharing)
 
 ## Apa yang Dapat Dilakukan SobatOto?
+
 <p align="center">
   <img src="images/sobatoto_interface.png" alt="Maskot SobatOto" width="300">
 </p>
+
 SobatOto mengumpulkan informasi melalui pertanyaan bertahap agar pengguna tidak perlu menuliskan istilah teknis. Setiap jawaban akan dicatat sebagai informasi mengenai kondisi motor. Setelah itu, sistem mencari aturan yang cocok dengan kumpulan jawaban tersebut.
 
 Hasil pemeriksaan berisi kemungkinan masalah, alasan hasil tersebut muncul, tingkat urgensi, tindakan yang disarankan, dan sumber manual. Jika beberapa aturan cocok pada saat yang sama, SobatOto dapat menampilkan lebih dari satu hasil. Hal ini memungkinkan pengguna melihat beberapa kondisi yang mungkin saling berkaitan.
