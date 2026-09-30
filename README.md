@@ -1,9 +1,9 @@
 # Tentang SobatOto
-## Chatbot *Troubleshooting* Sepeda Motor Matic Berbasis *Knowledge-Base System*
+## *Chatbot* *Troubleshooting* Sepeda Motor Matic Berbasis *Knowledge-Base System*
 
 Ketika sepeda motor mengalami masalah, pengguna biasanya mulai memeriksa gejala yang paling mudah terlihat. Contohnya adalah kondisi panel, suara starter, jumlah bahan bakar, lampu indikator, rem, dan ban. Namun, tidak semua pengguna mengetahui arti dari gejala tersebut atau urutan pemeriksaan yang sebaiknya dilakukan.
 
-SobatOto dibuat untuk membantu proses pemeriksaan awal tersebut. Aplikasi ini berbentuk chatbot sederhana yang dapat dibuka melalui browser. Pengguna hanya perlu menjawab pertanyaan yang muncul satu per satu. Setelah seluruh pertanyaan selesai, SobatOto menghubungkan jawaban pengguna dengan pengetahuan yang tersimpan di dalam sistem, lalu menampilkan kemungkinan masalah dan tindakan awal yang sesuai.
+SobatOto dibuat untuk membantu proses pemeriksaan awal tersebut. Aplikasi ini berbentuk *chatbot* sederhana yang dapat dibuka melalui browser. Pengguna hanya perlu menjawab pertanyaan yang muncul satu per satu. Setelah seluruh pertanyaan selesai, SobatOto menghubungkan jawaban pengguna dengan pengetahuan yang tersimpan di dalam sistem, lalu menampilkan kemungkinan masalah dan tindakan awal yang sesuai.
 
 Hasil yang ditampilkan bukan diagnosis akhir. SobatOto berfungsi sebagai panduan awal agar pengguna lebih memahami kondisi motornya dan mengetahui kapan kendaraan sebaiknya tidak digunakan sebelum diperiksa oleh teknisi.
 
@@ -13,7 +13,7 @@ Hasil yang ditampilkan bukan diagnosis akhir. SobatOto berfungsi sebagai panduan
 
 Salah satu contoh aturannya adalah: jika panel motor mati dan starter tidak berbunyi, maka terdapat kemungkinan gangguan pada sumber listrik. Bentuk aturan seperti ini biasa disebut aturan IF–THEN, yaitu **jika** beberapa kondisi terpenuhi, **maka** sistem menghasilkan suatu kesimpulan.
 
-SobatOto tidak menulis jawaban baru secara bebas seperti chatbot generatif. Sistem hanya memberikan hasil yang sesuai dengan aturan yang tersimpan. Karena itu, alasan di balik setiap hasil dapat dilihat dari gejala yang dipilih, aturan yang aktif, dan sumber manualnya.
+SobatOto tidak menulis jawaban baru secara bebas seperti *chatbot* generatif. Sistem hanya memberikan hasil yang sesuai dengan aturan yang tersimpan. Karena itu, alasan di balik setiap hasil dapat dilihat dari gejala yang dipilih, aturan yang aktif, dan sumber manualnya.
 
 ## Tautan Proyek
 
@@ -31,7 +31,7 @@ Hasil pemeriksaan berisi kemungkinan masalah, alasan hasil tersebut muncul, ting
 
 ### Persyaratan
 
-Proyek ini tidak memerlukan framework atau package tambahan. Untuk menjalankannya, pengguna hanya memerlukan browser modern seperti Google Chrome, Microsoft Edge, atau Mozilla Firefox. Python 3 diperlukan apabila proyek ingin dijalankan menggunakan local server.
+Proyek ini tidak memerlukan *framework* atau package tambahan. Untuk menjalankannya, pengguna hanya memerlukan browser modern seperti Google Chrome, Microsoft Edge, atau Mozilla Firefox. Python 3 diperlukan apabila proyek ingin dijalankan menggunakan *local server*.
 
 ### Langkah Menjalankan dengan Web
 
@@ -58,13 +58,13 @@ Buka tautan https://bintangadhityakuncoroputra.github.io/SobatOto/ pada _browser
    http://localhost:8000
    ```
 
-Local server digunakan karena sistem memuat `rules.json` melalui Fetch API. Membuka `index.html` secara langsung dengan double-click dapat menyebabkan browser memblokir pemuatan file JSON.
+*Local server* digunakan karena sistem memuat `rules.json` melalui Fetch API. Membuka `index.html` secara langsung dengan *double-click* dapat menyebabkan browser memblokir pemuatan file JSON.
 
 ## Bagaimana Aplikasi Ini Dibangun?
 
 SobatOto merupakan aplikasi web sederhana. Artinya, aplikasi dapat dijalankan melalui browser tanpa perlu memasang aplikasi khusus. Beberapa teknologi digunakan karena masing-masing memiliki tugas yang berbeda.
 
-HTML digunakan untuk membentuk bagian-bagian halaman, seperti area percakapan, gambar, dan tombol jawaban. CSS mengatur tampilannya agar halaman lebih nyaman dibaca, termasuk warna, ukuran, dan posisi setiap elemen. JavaScript menjalankan interaksi chatbot, menyimpan jawaban pengguna, dan melakukan proses penalaran. Sementara itu, JSON digunakan sebagai tempat penyimpanan aturan troubleshooting agar pengetahuan sistem terpisah dari kode tampilan.
+HTML digunakan untuk membentuk bagian-bagian halaman, seperti area percakapan, gambar, dan tombol jawaban. CSS mengatur tampilannya agar halaman lebih nyaman dibaca, termasuk warna, ukuran, dan posisi setiap elemen. JavaScript menjalankan interaksi *chatbot*, menyimpan jawaban pengguna, dan melakukan proses penalaran. Sementara itu, JSON digunakan sebagai tempat penyimpanan aturan *troubleshooting* agar pengetahuan sistem terpisah dari kode tampilan.
 
 Pembagian tersebut menghasilkan struktur file berikut:
 
@@ -88,7 +88,7 @@ Proses ini dapat berlangsung beberapa kali. Sebuah kesimpulan dari aturan pertam
 
 ## Isi Pengetahuan Sistem
 
-Seluruh aturan SobatOto disimpan dalam file `rules.json`. Setiap aturan mencatat gejala yang diperlukan, kesimpulan, tingkat urgensi, penjelasan, tindakan yang disarankan, dan sumber informasi. Dengan menyimpan aturan secara terpisah, isi pengetahuan dapat diperiksa atau diperbarui tanpa harus mengubah tampilan chatbot dan algoritma utamanya.
+Seluruh aturan SobatOto disimpan dalam file `rules.json`. Setiap aturan mencatat gejala yang diperlukan, kesimpulan, tingkat urgensi, penjelasan, tindakan yang disarankan, dan sumber informasi. Dengan menyimpan aturan secara terpisah, isi pengetahuan dapat diperiksa atau diperbarui tanpa harus mengubah tampilan *chatbot* dan algoritma utamanya.
 
 Aturan tersebut disusun berdasarkan manual resmi Honda PCX160 dan Yamaha NMAX. Informasi yang dipilih mencakup prosedur menyalakan motor, indikator peringatan, bahan bakar, aki, sekring, rem, ban, oli, dan sistem pendingin. Aturan ditulis berdasarkan gejala umum agar dapat digunakan sebagai panduan pemeriksaan awal, tetapi tidak dimaksudkan untuk mewakili seluruh jenis dan model sepeda motor.
 
@@ -96,10 +96,11 @@ Aturan tersebut disusun berdasarkan manual resmi Honda PCX160 dan Yamaha NMAX. I
 
 SobatOto hanya memberikan pemeriksaan awal berdasarkan jawaban diskrit dari pengguna. Sistem belum dapat membaca sensor, suara mesin, tegangan aki, atau kondisi fisik kendaraan secara langsung. Aturan yang digunakan juga terbatas pada pengetahuan yang disusun dari manual Honda PCX160 dan Yamaha NMAX, sehingga hasilnya tidak mencakup seluruh kemungkinan kerusakan pada semua jenis sepeda motor.
 
-Untuk masalah yang berhubungan dengan rem, ban, mesin terlalu panas, kelistrikan, atau kondisi lain yang berisiko, pengguna tetap perlu menghentikan penggunaan kendaraan dan meminta pemeriksaan teknisi. Hasil chatbot sebaiknya dipahami sebagai panduan pemeriksaan awal, bukan sebagai pengganti diagnosis profesional.
+Untuk masalah yang berhubungan dengan rem, ban, mesin terlalu panas, kelistrikan, atau kondisi lain yang berisiko, pengguna tetap perlu menghentikan penggunaan kendaraan dan meminta pemeriksaan teknisi. Hasil *chatbot* sebaiknya dipahami sebagai panduan pemeriksaan awal, bukan sebagai pengganti diagnosis profesional.
 
 ## Informasi Akademik
 
-Judul proyek: **Chatbot *Troubleshooting* Sepeda Motor Matic Berbasis *Knowledge-Base System***
+Judul proyek: ***Chatbot* *Troubleshooting* Sepeda Motor Matic Berbasis *Knowledge-Base System***
+Oleh kelompok OT9 beranggotakan Alfian Lazuardi Kalani (23/518890/TK/57187) dan Bintang Adhitya Kuncoro Putra (23/518604/TK/57118). 
 
 Proyek ini dibuat untuk memenuhi tugas akhir mata kuliah Artificial Intelligence, Departemen Teknik Elektro dan Teknologi Informasi, Universitas Gadjah Mada.
