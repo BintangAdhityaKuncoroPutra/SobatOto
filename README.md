@@ -19,12 +19,7 @@ SobatOto tidak menulis jawaban baru secara bebas seperti chatbot generatif. Sist
 
 - Demo chatbot: [SobatOto](https://bintangadhityakuncoroputra.github.io/SobatOto/)
 - Repository source code: [GitHub SobatOto](https://github.com/BintangAdhityaKuncoroPutra/SobatOto)
-- Laporan PDF: **[Tautan laporan PDF akan ditambahkan di sini]**
-- Presentasi PowerPoint: **[Tautan file presentasi akan ditambahkan di sini]**
-- Video rekaman presentasi: **[Tautan video rekaman akan ditambahkan di sini]**
-- Folder Google Drive proyek: **[Tautan Google Drive akan ditambahkan di sini]**
-
-Folder Google Drive dapat berisi salinan laporan PDF, file PowerPoint, dan video rekaman presentasi. File yang dikumpulkan melalui ELOK tetap mengikuti ketentuan pengumpulan yang berlaku.
+- Laporan dan PPT: [Penjelasan](https://drive.google.com/drive/folders/1Dbpwmw43ebVreyou-A0sh0NcY_cnH0Of?usp=sharing)
 
 ## Apa yang Dapat Dilakukan SobatOto?
 
